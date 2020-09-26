@@ -1,0 +1,61 @@
+/* HOME html */
+
+.header{
+    width: 900px;
+    margin: 20px 0 20px 0;
+}
+h2{
+    display: inline-block;
+}
+.header a{
+    display: inline-block;
+    vertical-align: top;
+    margin: 10px 15px 0 60%;
+}
+.header form{
+    display: inline-block;
+}
+.header button{
+    width: 115px;
+    display: inline-block;
+    margin: 0 0 0 0;
+}
+table{
+    border-collapse: collapse;
+    border: 3px solid black;
+}
+th, td{
+    border-right: 3px solid black;;
+}
+
+/* New_Wish.HTML  */
+
+.messages_wish{
+    color: brown;
+    margin-left: 30px;  
+}
+ul{
+    list-style-type: none;
+}
+.add_wish form{
+    width: 370px;
+    border: 2px solid black;
+    display: block;
+}
+#wish{ margin: 20px 36px; }
+#desc{ margin: 0 25px 15px 30px; }
+
+.header_edit{
+    margin: 20px 0;
+}
+.header_edit a{
+    margin-left: 30%;
+}
+.add_wish button, .edit_wish button{
+    margin: 0 -100px 30px 138px;
+}
+.edit_wish form{
+    width: 370px;
+    border: 2px solid black;
+    display: block;
+}

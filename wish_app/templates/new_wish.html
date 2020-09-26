@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'wstyle.css' %}">
+    <title>The Wishing App</title>
+</head>
+<body>
+    
+    <div class="wrapper">
+        <div class="header">
+            <h2>Hello {{user.first_name}} !</h2>
+            <a href="/logout">log out</a>
+        </div>
+
+        <div class="messages_wish">
+            {% if messages %}
+            <ul>
+                {% for message in messages %}
+                    <li><span>{{ message }}</span></li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </div>
+
+        <div class="add_wish">
+            <form action="/add_wish" method="POST">
+                {% csrf_token %}
+                <label for="wish" id="wish">I wish for: </label><input type="text" name="wish" >
+                <label for="description" id="desc">Description: </label><input type="text" name="desc" >
+                <button><a href="/wishes">Cancel</a></button>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
